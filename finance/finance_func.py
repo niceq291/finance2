@@ -11,7 +11,7 @@ def get_item_main_url_mobile(code):
 
 # 종합 항목 맵핑
 def f(x):
-    return {'전일': '111',
+    return {'전일': '111111',
             '시가': '1',
             'a': '1',
             'a': '1',
