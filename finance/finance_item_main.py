@@ -89,12 +89,11 @@ def get_investment_info(stock_cd, soup):
             # 타이틀이 여러개일 경우 분리
             th_arr = th_title.replace('\n', '').replace('\t', '').replace(' ', '').split('l')
 
-            # 음.... 배열의 길이가 1보다 클 경우에는
-            # PER 등을 구분지어주기위해 다음 자리의 (FnGuide), (KRX), 추정 을 확인하여 앞에 붙여준다다
+            #음.... 배열의 길이가 1보다 클 경우에는
+            #PER 등을 구분지어주기위해 다음 자리의 (FnGuide), (KRX), 추정 을 확인하여 앞에 붙여준다
 
-           if len(len(th_arr)) > 1:
+            if len(th_arr) > 1:
                 for j, text in enumerate(th_arr):
-                    # if th_arr[j].find('')
                     value_arr_title2.append(th_arr[j])
             else:
                 value_arr_title2.append(th_arr[0])
